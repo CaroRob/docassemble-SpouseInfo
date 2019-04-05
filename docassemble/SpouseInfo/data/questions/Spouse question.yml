@@ -1,0 +1,20 @@
+---
+objects:
+  - client: Individual
+  - spouse: Individual 
+---
+mandatory: True
+question: |
+  Are you married?
+fields:
+  - no label: has_spouse
+    datatype: yesnoradio
+  - Spouse's first name: spouse.name.first
+    show if: has_spouse
+  - Spouse's middle name: spouse.name.middle
+    required: False
+    show if: has_spouse
+  - Spouse's last name: spouse.name.last
+    show if: has_spouse
+---
+ 
